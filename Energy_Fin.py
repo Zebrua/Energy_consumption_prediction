@@ -67,12 +67,12 @@ for i in range(len(degrees)):
     X_fit = np.linspace(5000, 95000, 1000)
     plt.plot(X_fit, lin_regr.predict(poly.transform(X_fit.reshape(-1, 1))), label=("Model Training, polynomial degree = ", degrees[i]))
     plt.scatter(X_train, y_train, color="b", s=10, label="datapoints from the training dataframe" ) 
-    plt.scatter(X_val, y_val, color="r", s=10, label="datapoints from the validation dataframe" )    # plot a scatter plot of y(maxtmp) vs. X(mintmp) with color 'blue' and size '10'
-    plt.xlabel('Total consumption')    # set the label for the x/y-axis
+    plt.scatter(X_val, y_val, color="r", s=10, label="datapoints from the validation dataframe" )   
+    plt.xlabel('Total consumption')   
     plt.ylabel('Construction part (%)')
-    plt.legend(loc="best")    # set the location of the legend
-    plt.title('Construction part of total energy consumption')    # set the title
-    plt.show()    # show the plot
+    plt.legend(loc="best")   
+    plt.title('Construction part of total energy consumption')  
+    plt.show()  
         
     
     
